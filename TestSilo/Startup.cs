@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.SpaServices.Webpack;
-using TestSilo.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace TestSilo

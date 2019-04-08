@@ -16,7 +16,7 @@ namespace TestSilo
         }
 
         public virtual DbSet<Silo> Silo { get; set; }
-        public virtual DbSet<Users> Users { get; set; }
+        //public virtual DbSet<Users> Users { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -36,10 +36,10 @@ namespace TestSilo
                     .HasMaxLength(30);
             });
 
-            modelBuilder.Entity<Users>(entity =>
-            {
-                entity.Property(e => e.UserName).HasMaxLength(250);
-            });
+            //modelBuilder.Entity<Users>(entity =>
+            //{
+            //    entity.Property(e => e.UserName).HasMaxLength(250);
+            //});
         }
     }
 }

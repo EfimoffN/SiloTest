@@ -3,7 +3,6 @@ using System.Linq;
 using System.Net.Mime;
 using Microsoft.AspNetCore.Mvc;
 using Remotion.Linq.Parsing.ExpressionVisitors.MemberBindings;
-using TestSilo.Models;
 
 namespace TestSilo.Controllers
 {

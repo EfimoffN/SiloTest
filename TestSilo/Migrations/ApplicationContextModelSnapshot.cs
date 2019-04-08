@@ -3,11 +3,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using TestSilo.Models;
+//using TestSilo.Models;
 
 namespace TestSilo.Migrations
 {
-    [DbContext(typeof(ApplicationContext))]
+    [DbContext(typeof(SiloDBContext))]
     partial class ApplicationContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
