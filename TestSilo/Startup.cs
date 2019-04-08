@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.SpaServices.Webpack;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 namespace TestSilo
 {
@@ -10,7 +11,7 @@ namespace TestSilo
     {
         public void ConfigureServices(IServiceCollection services)
         {
-            string connectionString = "Server=DESKTOP-MB2FKUT\\SQLEXPRESS;Database=SiloDB;Trusted_Connection=True;";
+            string connectionString = "";
             services.AddDbContext<SiloDBContext>(options => options.UseSqlServer(connectionString));
 
             services.AddMvc();
@@ -33,5 +34,12 @@ namespace TestSilo
             app.UseStaticFiles();
             app.UseMvc();
         }
+
+        public Startup(IConfiguration configuration)
+        {
+            Configuration = configuration;
+        }
+
+        public IConfiguration Configuration { get; }
     }
 }

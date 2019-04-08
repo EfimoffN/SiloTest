@@ -18,7 +18,7 @@ namespace TestSilo.Controllers
         [HttpGet]
         public IEnumerable<Silo>  Get()
         {
-            var t = db.Silo.ToList();
+            List<Silo> t = db.Silo.ToList();
             return db.Silo.ToList();
         }
 
