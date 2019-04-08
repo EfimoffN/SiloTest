@@ -18,7 +18,6 @@ export class DataService {
         return this.http.post(this.url, silo);
     }
     updateSilos(silo: Silo) {  
-        console.log(this.url + '/' + silo.id,);
         return this.http.put(this.url + '/' + silo.id, silo);
     }
     deleteSilos(id: number) {

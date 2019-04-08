@@ -17,7 +17,6 @@ export class AppComponent implements OnInit {
  
     ngOnInit() {
         this.loadSilos();
-        console.log(this.silos);
     }
 
     loadSilos() {
@@ -26,7 +25,6 @@ export class AppComponent implements OnInit {
     }
 
     save() {
-        console.log(this.silos);
         if (this.silo.id == null) {
             this.dataService.createSilos(this.silo)
                 .subscribe((data: Silo) => this.silos.push(data));

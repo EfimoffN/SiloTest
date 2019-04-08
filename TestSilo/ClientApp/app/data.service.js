@@ -21,7 +21,6 @@ var DataService = /** @class */ (function () {
         return this.http.post(this.url, silo);
     };
     DataService.prototype.updateSilos = function (silo) {
-        console.log(this.url + '/' + silo.id);
         return this.http.put(this.url + '/' + silo.id, silo);
     };
     DataService.prototype.deleteSilos = function (id) {

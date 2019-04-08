@@ -11,7 +11,7 @@ namespace TestSilo
     {
         public void ConfigureServices(IServiceCollection services)
         {
-            string connectionString = "";
+            string connectionString = " ";
             services.AddDbContext<SiloDBContext>(options => options.UseSqlServer(connectionString));
 
             services.AddMvc();

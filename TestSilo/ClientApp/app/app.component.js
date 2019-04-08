@@ -18,7 +18,6 @@ var AppComponent = /** @class */ (function () {
     }
     AppComponent.prototype.ngOnInit = function () {
         this.loadSilos();
-        console.log(this.silos);
     };
     AppComponent.prototype.loadSilos = function () {
         var _this = this;
@@ -27,7 +26,6 @@ var AppComponent = /** @class */ (function () {
     };
     AppComponent.prototype.save = function () {
         var _this = this;
-        console.log(this.silos);
         if (this.silo.id == null) {
             this.dataService.createSilos(this.silo)
                 .subscribe(function (data) { return _this.silos.push(data); });
